@@ -2007,7 +2007,21 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
                     import traceback
                     logger.error(traceback.format_exc())
             try:
-                await bot.send_message(user_id, "📝 Объявление отправлено на модерацию.", reply_markup=build_main_menu(bot_id))
+                await bot.send_message(user_id, '<tg-emoji emoji-id="5890997763331591703">🔊</tg-emoji> Объявление отправлено на модерацию \n\n'
+        '<tg-emoji emoji-id="5240140094333020716">✨</tg-emoji>Его выложат в течении дня '
+        '<tg-emoji emoji-id="5240149921218195956">✨</tg-emoji>\n\n'
+        '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240277099494793815">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240019178118736625">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240433268800648857">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240211502459286389">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240191118544497151">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5237784017008361391">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240052034618553066">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240407799644581079">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>',
+        parse_mode="HTML", 
+        reply_markup=build_main_menu(bot_id))
             except Exception:
                 pass
         else:
