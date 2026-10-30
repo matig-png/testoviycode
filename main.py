@@ -2655,9 +2655,9 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
             await callback.message.edit_text(
         '─ִֺ─⊹ֺ⊱ Перед отправкой прочтите п'
         '<a href="https://telegra.ph/Pravila-tejkov-10-28-4"><b>равила тейков\n</b></a>'
-        '✨<tg-emoji emoji-id="5240140094333020716">О</tg-emoji>тправьте любое сообщение '
+        '✨<tg-emoji emoji-id="5240140094333020716">Отправьте любое сообщение '
         f'с #тейк в конце{pause_text} (пожалуйста не пишите ничего после него)\n\n'
-        '✨<tg-emoji emoji-id="5240140094333020716">В</tg-emoji>ы можете просто отправлять '
+        '✨<tg-emoji emoji-id="5240140094333020716">Вы можете просто отправлять '
         'сообщение с хэштегом без лишних действий и даже этой кнопки\n\n'
         '✨<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240277099494793815">✨</tg-emoji>'
