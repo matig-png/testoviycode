@@ -1909,8 +1909,25 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
             await callback.answer("Канал для объявлений не настроен.", show_alert=True)
             return
         await callback.message.edit_text(
-            "📢 Отправьте ваше объявление (можно несколько фото/видео)",
-            reply_markup=build_cancel_keyboard()
+            '─ִֺ─⊹ֺ⊱ Перед отправкой прочтите '
+            '<b><a href="https://telegra.ph/PRAVILA-POSTOV-V-SHOPE-10-28">правила публикаций в шопе</a></b>\n\n'
+            '<tg-emoji emoji-id="5240140094333020716">✨</tg-emoji>Отправьте ваше объявление, '
+            'оно будет отправлено на модерацию\n\n'
+            '<tg-emoji emoji-id="5240140094333020716">✨</tg-emoji>Для удобства подписчиков '
+            'рекомендуем поставить хэштеги\n\n'
+            '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240277099494793815">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240019178118736625">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240433268800648857">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240211502459286389">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240191118544497151">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5237784017008361391">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240052034618553066">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5240407799644581079">✨</tg-emoji>'
+            '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>',
+            parse_mode="HTML",
+            reply_markup=build_cancel_keyboard(),
+            link_preview_options=LinkPreviewOptions(is_disabled=True)
         )
         await state.set_state(AnnouncementStates.WaitingAnnouncement)
         await callback.answer()
