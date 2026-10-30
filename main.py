@@ -2653,10 +2653,26 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
             cfg = config.bots.get(bot_id)
             pause_text = " ⏸ (на паузе — будет отправлен позже)" if cfg.takes_paused else ""
             await callback.message.edit_text(
-                f"📝 Отправьте тейк с хештегом #тейк{pause_text}\n"
-                f"💡 Можно отправить несколько фото/видео как альбом\n"
-                f"⏱ {cooldown_msg}",
-                reply_markup=build_cancel_keyboard()
+        '─ִֺ─⊹ֺ⊱ Перед отправкой прочтите п'
+        '<a href="https://telegra.ph/Pravila-tejkov-10-28-4"><b>равила тейков\n</b></a>'
+        '✨<tg-emoji emoji-id="5240140094333020716">О</tg-emoji>тправьте любое сообщение '
+        f'с #тейк в конце{pause_text} (пожалуйста не пишите ничего после него)\n\n'
+        '✨<tg-emoji emoji-id="5240140094333020716">В</tg-emoji>ы можете просто отправлять '
+        'сообщение с хэштегом без лишних действий и даже этой кнопки\n\n'
+        '✨<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240277099494793815">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240019178118736625">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240433268800648857">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240211502459286389">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240191118544497151">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5237784017008361391">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240052034618553066">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5240407799644581079">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5239947087092674057">\n</tg-emoji>\n'
+        f'⏲<tg-emoji emoji-id="5258258882022612173">️</tg-emoji> Тейков: {remaining_takes}/3\n'
+        f'⏱ {cooldown_msg}',
+        parse_mode="HTML",
+        reply_markup=build_cancel_keyboard()
             )
             await state.set_state(TakeStates.WaitingTake)
             await callback.answer()
