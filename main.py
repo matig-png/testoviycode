@@ -2669,8 +2669,7 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
         '<tg-emoji emoji-id="5240052034618553066">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240407799644581079">✨</tg-emoji>'
         '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>\n\n'
-        f'<tg-emoji emoji-id="5258258882022612173">⏲️</tg-emoji> Тейков: {remaining_takes}/3\n'
-        f'⏱ {cooldown_msg}',
+        f'<tg-emoji emoji-id="5258258882022612173">⏲️</tg-emoji> Тейков: {remaining_takes}/3\n',
         parse_mode="HTML",
         reply_markup=build_cancel_keyboard()
             )
