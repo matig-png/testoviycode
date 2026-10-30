@@ -2671,7 +2671,7 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
         '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>\n\n'
         f'<tg-emoji emoji-id="5258258882022612173">⏲️</tg-emoji> Тейков: {remaining_takes}/3\n',
         parse_mode="HTML",
-        reply_markup=build_cancel_keyboard()
+        reply_markup=build_cancel_keyboard(),
         link_preview_options=LinkPreviewOptions(is_disabled=True)
             )
             await state.set_state(TakeStates.WaitingTake)
