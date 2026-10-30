@@ -2653,13 +2653,13 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
             cfg = config.bots.get(bot_id)
             pause_text = " ⏸ (на паузе — будет отправлен позже)" if cfg.takes_paused else ""
             await callback.message.edit_text(
-        '─ִֺ─⊹ֺ⊱ Перед отправкой прочтите п'
-        '<a href="https://telegra.ph/Pravila-tejkov-10-28-4"><b>равила тейков\n</b></a>'
-        '✨<tg-emoji emoji-id="5240140094333020716">Отправьте любое сообщение '
+        '─ִֺ─⊹ֺ⊱ Перед отправкой прочтите '
+        '<b><a href="https://telegra.ph/Pravila-tejkov-10-28-4">правила тейков</a></b>\n\n'
+        '<tg-emoji emoji-id="5240140094333020716">✨</tg-emoji>Отправьте любое сообщение '
         f'с #тейк в конце{pause_text} (пожалуйста не пишите ничего после него)\n\n'
-        '✨<tg-emoji emoji-id="5240140094333020716">Вы можете просто отправлять '
+        '<tg-emoji emoji-id="5240140094333020716">✨</tg-emoji>Вы можете просто отправлять '
         'сообщение с хэштегом без лишних действий и даже этой кнопки\n\n'
-        '✨<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>'
+        '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240277099494793815">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240019178118736625">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240433268800648857">✨</tg-emoji>'
@@ -2668,8 +2668,8 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
         '<tg-emoji emoji-id="5237784017008361391">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240052034618553066">✨</tg-emoji>'
         '<tg-emoji emoji-id="5240407799644581079">✨</tg-emoji>'
-        '<tg-emoji emoji-id="5239947087092674057">\n</tg-emoji>\n'
-        f'⏲<tg-emoji emoji-id="5258258882022612173">️</tg-emoji> Тейков: {remaining_takes}/3\n'
+        '<tg-emoji emoji-id="5239947087092674057">✨</tg-emoji>\n\n'
+        f'<tg-emoji emoji-id="5258258882022612173">⏲️</tg-emoji> Тейков: {remaining_takes}/3\n'
         f'⏱ {cooldown_msg}',
         parse_mode="HTML",
         reply_markup=build_cancel_keyboard()
