@@ -1675,7 +1675,14 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
         await callback.answer()
     @router.callback_query(F.data == "back_main")
     async def callback_back_main(callback: types.CallbackQuery):
-        await callback.message.edit_text("Выберите действие:", reply_markup=build_main_menu(bot_id))
+        await callback.message.edit_text(            
+            '<blockquote><tg-emoji emoji-id="5240276197551664792">✨</tg-emoji> '
+            '<b><i>Добро пожаловать!</i></b></blockquote>\n'
+            '<tg-emoji emoji-id="5239964584789438173">✨</tg-emoji>'
+            '<i>Выберите действие:</i>'
+            '<tg-emoji emoji-id="5239964584789438173">✨</tg-emoji>',
+            parse_mode="HTML", 
+            reply_markup=build_main_menu(bot_id))
         await callback.answer()
     @router.callback_query(F.data == "currency_menu")
     async def callback_currency_menu(callback: types.CallbackQuery):
