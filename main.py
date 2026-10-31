@@ -975,7 +975,7 @@ def build_currency_menu(bot_id: str) -> InlineKeyboardMarkup:
         InlineKeyboardButton(text="Конвертация", icon_custom_emoji_id="6039859895291877126", callback_data="convert"),
         InlineKeyboardButton(text="Курсы", icon_custom_emoji_id="5938539885907415367", callback_data="rates")
     )
-    builder.row(InlineKeyboardButton(text="◀️ Назад", callback_data="back_main"))
+    builder.row(InlineKeyboardButton(text="Назад", icon_custom_emoji_id="5960671702059848143", callback_data="back_main"))
     return builder.as_markup()
 def build_admin_menu(uid: int, bot_id: str) -> InlineKeyboardMarkup:
     """Админ-панель."""
@@ -1037,7 +1037,7 @@ def build_censor_menu() -> InlineKeyboardMarkup:
     )
     builder.row(
         InlineKeyboardButton(text="📋 Список", callback_data="censor_list"),
-        InlineKeyboardButton(text="◀️ Назад", callback_data="admin_mode")
+        InlineKeyboardButton(text="Назад", icon_custom_emoji_id="5960671702059848143", callback_data="admin_mode")
     )
     return builder.as_markup()
 def build_mods_menu() -> InlineKeyboardMarkup:
@@ -1049,7 +1049,7 @@ def build_mods_menu() -> InlineKeyboardMarkup:
     )
     builder.row(
         InlineKeyboardButton(text="📋 Список", callback_data="mod_list"),
-        InlineKeyboardButton(text="◀️ Назад", callback_data="admin_mode")
+        InlineKeyboardButton(text="Назад", icon_custom_emoji_id="5960671702059848143", callback_data="admin_mode")
     )
     return builder.as_markup()
 def build_announcement_mods_menu() -> InlineKeyboardMarkup:
@@ -1061,7 +1061,7 @@ def build_announcement_mods_menu() -> InlineKeyboardMarkup:
     )
     builder.row(
         InlineKeyboardButton(text="📋 Список", callback_data="ann_mod_list"),
-        InlineKeyboardButton(text="◀️ Назад", callback_data="admin_mode")
+        InlineKeyboardButton(text="Назад", icon_custom_emoji_id="5960671702059848143", callback_data="admin_mode")
     )
     return builder.as_markup()
 def build_currency_keyboard(exclude: str = None) -> InlineKeyboardMarkup:
@@ -1880,7 +1880,7 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
         if cfg.channel_url:
             builder.row(InlineKeyboardButton(text="📢 Перейти в канал", url=cfg.channel_url))
         builder.row(InlineKeyboardButton(text="❓ Викторина", callback_data="quiz_start"))
-        builder.row(InlineKeyboardButton(text="◀️ Назад", callback_data="currency_menu"))
+        builder.row(InlineKeyboardButton(text="Назад", icon_custom_emoji_id="5960671702059848143", callback_data="currency_menu"))
         await callback.message.edit_text("Способы заработка:", reply_markup=builder.as_markup())
         await callback.answer()
     @router.callback_query(F.data == "quiz_start")
@@ -3064,7 +3064,7 @@ def create_bot_handlers(bot_id: str, bot_instance: Bot, dp: Dispatcher):
                 text=delete_text,
                 callback_data=f"delete_my_take_{take_id}"
             ))
-            builder.row(InlineKeyboardButton(text="◀️ Назад", callback_data="my_takes"))
+            builder.row(InlineKeyboardButton(text="Назад", icon_custom_emoji_id="5960671702059848143", callback_data="my_takes"))
             caption_text = take_data.get('caption', 'Без текста')[:100]
             type_text = "Альбом" if take_data['content_type'] == 'media_group' else "Одиночный"
             await callback.message.edit_text(
