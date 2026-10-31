@@ -1022,7 +1022,7 @@ def build_admin_menu(uid: int, bot_id: str) -> InlineKeyboardMarkup:
 def build_cancel_keyboard() -> InlineKeyboardMarkup:
     """Кнопка отмены."""
     return InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="❌ Отмена", callback_data="cancel")]
+        [InlineKeyboardButton(text="Отмена", icon_custom_emoji_id="5774077015388852135", callback_data="cancel")]
     ])
 def build_censor_menu() -> InlineKeyboardMarkup:
     """Меню цензуры."""
@@ -1073,7 +1073,7 @@ def build_currency_keyboard(exclude: str = None) -> InlineKeyboardMarkup:
                 text=f"{bot_cfg.currency_name} {bot_cfg.currency_emoji}",
                 callback_data=f"currency_{bot_id}"
             ))
-    builder.row(InlineKeyboardButton(text="❌ Отмена", callback_data="cancel"))
+    builder.row(InlineKeyboardButton(text="Отмена", icon_custom_emoji_id="5774077015388852135", callback_data="cancel"))
     return builder.as_markup()
 def build_modules_keyboard() -> InlineKeyboardMarkup:
     """Выбор модулей при подключении бота."""
@@ -1081,7 +1081,7 @@ def build_modules_keyboard() -> InlineKeyboardMarkup:
     builder.row(InlineKeyboardButton(text="📝 Только тейки", callback_data="module_takes"))
     builder.row(InlineKeyboardButton(text="🛒 Только магазин", callback_data="module_shop"))
     builder.row(InlineKeyboardButton(text="📝🛒 Всё", callback_data="module_all"))
-    builder.row(InlineKeyboardButton(text="❌ Отмена", callback_data="cancel"))
+    builder.row(InlineKeyboardButton(text="Отмена", icon_custom_emoji_id="5774077015388852135", callback_data="cancel"))
     return builder.as_markup()
 def build_take_moderation_keyboard(take_id: str, uid: int, is_blocked: bool) -> InlineKeyboardMarkup:
     """
@@ -1185,7 +1185,7 @@ def build_promo_confirm_keyboard() -> InlineKeyboardMarkup:
     """Подтверждение пиара."""
     return InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton(text="✅ Оплатить", callback_data="promo_pay"),
-        InlineKeyboardButton(text="❌ Отмена", callback_data="cancel")
+        InlineKeyboardButton(text="Отмена", icon_custom_emoji_id="5774077015388852135", callback_data="cancel")
     ]])
 def build_quiz_keyboard(question_num: int) -> InlineKeyboardMarkup:
     """Варианты ответов викторины."""
