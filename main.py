@@ -944,7 +944,7 @@ def build_main_menu(bot_id: str) -> InlineKeyboardMarkup:
         return InlineKeyboardMarkup(inline_keyboard=[])
     builder = InlineKeyboardBuilder()
     if "takes" in bot_cfg.modules:
-        builder.row(InlineKeyboardButton(text="✏️ Отправить тейк",
+        builder.row(InlineKeyboardButton(text="Отправить тейк",
             icon_custom_emoji_id="6039779802741739617", callback_data="send_take"))
         builder.row(InlineKeyboardButton(text="✏️ Мои тейки", callback_data="my_takes"))
     if "shop" in bot_cfg.modules:
