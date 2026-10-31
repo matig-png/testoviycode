@@ -964,16 +964,16 @@ def build_currency_menu(bot_id: str) -> InlineKeyboardMarkup:
     """
     builder = InlineKeyboardBuilder()
     builder.row(
-        InlineKeyboardButton(text="💰 Заработать", callback_data="earn"),
-        InlineKeyboardButton(text="💸 Перевести", callback_data="transfer")
+        InlineKeyboardButton(text="Заработать", icon_custom_emoji_id="6032644646587338669", callback_data="earn"),
+        InlineKeyboardButton(text="Перевести", icon_custom_emoji_id="5891105528356018797", callback_data="transfer")
     )
     builder.row(
-        InlineKeyboardButton(text="🏆 Топ", callback_data="top"),
-        InlineKeyboardButton(text="💳 Баланс", callback_data="balance")
+        InlineKeyboardButton(text="Топ", icon_custom_emoji_id="6032594876506312598", callback_data="top"),
+        InlineKeyboardButton(text="Баланс", icon_custom_emoji_id="5769126056262898415", callback_data="balance")
     )
     builder.row(
-        InlineKeyboardButton(text="💱 Конвертация", callback_data="convert"),
-        InlineKeyboardButton(text="📊 Курсы", callback_data="rates")
+        InlineKeyboardButton(text="Конвертация", icon_custom_emoji_id="6039859895291877126", callback_data="convert"),
+        InlineKeyboardButton(text="Курсы", icon_custom_emoji_id="5938539885907415367", callback_data="rates")
     )
     builder.row(InlineKeyboardButton(text="◀️ Назад", callback_data="back_main"))
     return builder.as_markup()
