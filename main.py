@@ -1090,8 +1090,8 @@ def build_take_moderation_keyboard(take_id: str, uid: int, is_blocked: bool) -> 
     """
     builder = InlineKeyboardBuilder()
     builder.row(
-        InlineKeyboardButton(text="✅ Отправить", callback_data=f"take_approve_{take_id}"),
-        InlineKeyboardButton(text="❌ Отклонить", callback_data=f"take_reject_{take_id}")
+        InlineKeyboardButton(text="Отправить", icon_custom_emoji_id="5774022692642492953", callback_data=f"take_approve_{take_id}"),
+        InlineKeyboardButton(text="Отклонить", icon_custom_emoji_id="5774077015388852135", callback_data=f"take_reject_{take_id}")
     )
     builder.row(
         InlineKeyboardButton(text="🚫 Заблокировать (тейки)", callback_data=f"user_block_{uid}")
@@ -1104,8 +1104,8 @@ def build_take_moderation_keyboard_blocked(take_id: str, uid: int) -> InlineKeyb
     """
     builder = InlineKeyboardBuilder()
     builder.row(
-        InlineKeyboardButton(text="✅ Отправить", callback_data=f"take_approve_{take_id}"),
-        InlineKeyboardButton(text="❌ Отклонить", callback_data=f"take_reject_{take_id}")
+        InlineKeyboardButton(text="Отправить", icon_custom_emoji_id="5774022692642492953", callback_data=f"take_approve_{take_id}"),
+        InlineKeyboardButton(text="Отклонить", icon_custom_emoji_id="5774077015388852135", callback_data=f"take_reject_{take_id}")
     )
     builder.row(
         InlineKeyboardButton(text="🔓 Разблокировать (тейки)", callback_data=f"take_unblock_{uid}")
@@ -1120,7 +1120,7 @@ def build_published_take_keyboard(channel_msg_ids: List[int], uid: int, is_block
     # ИЗМЕНЕНИЕ: Сохраняем список ID через запятую
     msg_ids_str = ",".join(map(str, channel_msg_ids))
     builder.row(
-        InlineKeyboardButton(text="🗑 Удалить из канала", callback_data=f"take_delete_{msg_ids_str}")
+        InlineKeyboardButton(text="Удалить из канала", icon_custom_emoji_id="6039522349517115015", callback_data=f"take_delete_{msg_ids_str}")
     )
     builder.row(
         InlineKeyboardButton(text="🚫 Заблокировать (тейки)", callback_data=f"user_block_{uid}")
@@ -1135,7 +1135,7 @@ def build_published_take_keyboard_blocked(channel_msg_ids: List[int], uid: int) 
     # ИЗМЕНЕНИЕ: Сохраняем список ID через запятую
     msg_ids_str = ",".join(map(str, channel_msg_ids))
     builder.row(
-        InlineKeyboardButton(text="🗑 Удалить из канала", callback_data=f"take_delete_{msg_ids_str}")
+        InlineKeyboardButton(text="Удалить из канала", icon_custom_emoji_id="6039522349517115015", callback_data=f"take_delete_{msg_ids_str}")
     )
     builder.row(
         InlineKeyboardButton(text="🔓 Разблокировать (тейки)", callback_data=f"take_unblock_{uid}")
