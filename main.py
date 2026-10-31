@@ -946,12 +946,16 @@ def build_main_menu(bot_id: str) -> InlineKeyboardMarkup:
     if "takes" in bot_cfg.modules:
         builder.row(InlineKeyboardButton(text="Отправить тейк",
             icon_custom_emoji_id="6039779802741739617", callback_data="send_take"))
-        builder.row(InlineKeyboardButton(text="✏️ Мои тейки", callback_data="my_takes"))
+        builder.row(InlineKeyboardButton(text="Мои тейки", 
+            icon_custom_emoji_id="6039614175917903752", callback_data="my_takes"))
     if "shop" in bot_cfg.modules:
-        builder.row(InlineKeyboardButton(text="📢 Продать в шопе", callback_data="post_announcement"))
-    builder.row(InlineKeyboardButton(text="💱 Валюта", callback_data="currency_menu"))
+        builder.row(InlineKeyboardButton(text="Продать в шопе", 
+            icon_custom_emoji_id="6021418126061605425", callback_data="post_announcement"))
+    builder.row(InlineKeyboardButton(text="Валюта", 
+            icon_custom_emoji_id="5935758241748230351", callback_data="currency_menu"))
     if bot_id == "main":
-        builder.row(InlineKeyboardButton(text="🤖 Подключить бота", callback_data="connect_bot"))
+        builder.row(InlineKeyboardButton(text="Подключить бота", 
+            icon_custom_emoji_id="5983580310292402968", callback_data="connect_bot"))
     return builder.as_markup()
 def build_currency_menu(bot_id: str) -> InlineKeyboardMarkup:
     """
